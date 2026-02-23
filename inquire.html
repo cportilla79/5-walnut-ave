@@ -50,41 +50,68 @@
           <li>Private hard-hat preview protocol (as construction allows)</li>
           <li>Discreet consultation and next steps</li>
         </ul>
-
-        <p class="subtle">
-          Prefer email? Use: <a class="link" href="mailto:christian.portilla+5walnut@compass.com?subject=5%20Walnut%20Private%20Preview%20Request">christian.portilla@compass.com</a>
-        </p>
       </div>
 
       <div class="formcard">
-        <!-- Placeholder form. Option A (simple): mailto. Option B: Formspree/other endpoint. -->
-        <form class="form" id="inquiryForm">
-          <label>
-            Full Name
-            <input required name="name" type="text" placeholder="Jane Doe" />
-          </label>
+<form class="form" action="https://formspree.io/f/xzdakdzj" method="POST">
 
-          <label>
-            Email
-            <input required name="email" type="email" placeholder="jane@email.com" />
-          </label>
+  <!-- Honeypot (anti-spam) -->
+  <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
 
-          <label>
-            Phone (optional)
-            <input name="phone" type="tel" placeholder="(917) 555-0123" />
-          </label>
+  <!-- Custom subject line -->
+  <input type="hidden" name="_subject" value="5 Walnut Ave — Private Inquiry">
 
-          <label>
-            Message
-            <textarea name="message" rows="4" placeholder="Tell us your timing and what you'd like to see."></textarea>
-          </label>
+  <!-- Redirect after submission -->
+  <input type="hidden" name="_redirect" value="https://www.5walnutave.com/thank-you.html">
 
-          <button class="btn" type="submit">Submit Confidential Inquiry</button>
+  <label>
+    Full Name
+    <input required name="name" type="text" placeholder="Jane Doe" />
+  </label>
 
-          <p class="fineprint">
-            This is a placeholder form. By default it will open your email client unless you connect a form service.
-          </p>
-        </form>
+  <label>
+    Email
+    <input required name="email" type="email" placeholder="jane@email.com" />
+  </label>
+
+  <label>
+    Phone (optional)
+    <input name="phone" type="tel" placeholder="(917) 555-0123" />
+  </label>
+
+  <label>
+    Purchase Timeline
+    <select name="timeline" required>
+      <option value="" disabled selected>Select timeline</option>
+      <option>0–3 months</option>
+      <option>3–6 months</option>
+      <option>6–12 months</option>
+      <option>12+ months</option>
+    </select>
+  </label>
+
+  <label>
+    Message
+    <textarea name="message" rows="4" placeholder="Tell us your timing and what you'd like to see." required></textarea>
+  </label>
+  
+<label>
+  Investment Range
+  <select name="budget_range" required>
+    <option value="" disabled selected>Select range</option>
+    <option>$5M–$6M</option>
+    <option>$6M–$7M</option>
+    <option>$7M+</option>
+  </select>
+</label>
+
+  <button class="btn" type="submit">Submit Confidential Inquiry</button>
+
+  <p class="fineprint">
+    All inquiries are handled discreetly. Access to the Private Preview Package is provided to qualified purchasers.
+  </p>
+</form>        
+    </div>
       </div>
     </div>
   </section>
