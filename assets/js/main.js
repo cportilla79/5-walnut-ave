@@ -20,3 +20,33 @@ if (slider) {
     imgs[idx].classList.add('is-on');
   }, 5500);
 }
+
+<script>
+  (function () {
+    const form = document.getElementById('inquiryForm');
+    if (!form) return;
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const action = form.getAttribute('action');
+      const formData = new FormData(form);
+
+      try {
+        const res = await fetch(action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (res.ok) {
+          window.location.href = '/thank-you.html';
+        } else {
+          alert('Something went wrong. Please try again or email us directly.');
+        }
+      } catch (err) {
+        alert('Network error. Please try again.');
+      }
+    });
+  })();
+</script>
