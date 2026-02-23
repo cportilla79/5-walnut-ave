@@ -41,6 +41,6 @@ if (form) {
       `— Sent from 5 Walnut website`;
 
     // Replace YOUR_EMAIL_HERE with your preferred inbox
-    window.location.href = `mailto:YOUR_EMAIL_HERE?subject=${subject}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:christian.portilla+5walnut@compass.com?subject=${subject}&body=${encodeURIComponent(body)}`;
   });
 }
